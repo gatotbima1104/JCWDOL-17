@@ -70,17 +70,20 @@ arr_1 = [1, 2, 3, 4]
 let newElement_1: number = 4
 let newElement_2: number = 7
 
-function pushToArray(arr:number [], newElement_1: number, newElement_2?: number) {
+function pushToArray(arr:number [], newElement_1: number, newElement_2: number):number [] {
 
-    let addedArr: number[] = []
-    arr.map((item, i) => {
-        if(item != newElement_1 || item != newElement_2) {
-            addedArr.push
-        }
-    })
+    if(!arr.includes(newElement_1)){
+        arr.push(newElement_1)
+    }
+
+    if(!arr.includes(newElement_2)){
+        arr.push(newElement_2)
+    }
+
+    return arr
 }
 
-console.log(`from push arr` + pushToArray(arr_1, newElement_1))
+console.log(new Array(pushToArray(arr_1, newElement_1, newElement_2)))
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
