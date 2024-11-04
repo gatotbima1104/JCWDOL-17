@@ -39,9 +39,10 @@ console.log(splitWords(arr_words))
 let num: number[] = [5, 3, 1, 7, 2, 6]
 
 function findSmallestSecondNum(num:number[]) {
-    return Math.min(...num)
+    let smallest = num.sort((a,b)=> a-b)
+    return smallest[1]
 }
-console.log("from smallest second ", findSmallestSecondNum(num))
+console.log("from smallest second number ", findSmallestSecondNum(num))
 
 // 4. Write a function to calculate each element in the same position from two arrays of integer. Assume both arrays
 // are of the same length.
